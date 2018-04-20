@@ -15,4 +15,22 @@
         <navigator class="row" url="">积分商城</navigator>
         <navigator class="row" url="">活动专区</navigator>
     </view>
+
+    <!-- list -->
+    <view class="list">
+        <view wx:for="{{list}}" wx:for-item="item" wx:for-index="idx" wx:key="{{item.id}}">
+            <navigator url="/pages/details/product/detail?id={{item.id}}">
+                <view class="title">{{item.name}}</view>
+                <view class="img">
+                    <image src="{{item.img}}" />
+                </view>
+            </navigator>
+        </view>
+    </view>
 </view>
+
+<!-- all screen loading -->
+<view class="allScreenLoading" style="display: {{allScreenLoading.sh}}">{{allScreenLoading.title}}</view>
+
+<!-- loading -->
+<view class="loading" style="display: {{loading.sh}}">{{loading.title}}</view>

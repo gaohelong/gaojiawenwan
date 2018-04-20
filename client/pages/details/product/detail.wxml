@@ -1,0 +1,5 @@
+<view class="prodcutDetail">
+    <view class="title">{{info.title}}</view>
+    <view class="time">{{info.time}}</view>
+    <view class="desc">{{info.desc}}</view>
+</view>

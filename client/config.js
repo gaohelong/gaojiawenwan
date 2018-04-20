@@ -24,7 +24,10 @@ var config = {
         uploadUrl: `${host}/weapp/upload`,
 
         // swiper
-        swiperUrl: `${host}/weapp/swiper`
+        swiperUrl: `${host}/weapp/swiper`,
+
+        // product detail
+        productDetailUrl: `${host}/weapp/detail`
     }
 };
 
