@@ -1,0 +1,18 @@
+<view class="swiper">
+    <!-- swiper -->
+    <swiper indicator-dots="{{swiperInfo.indicatorDots}}" autoplay="{{swiperInfo.autoplay}}" interval="{{swiperInfo.interval}}" duration="{{swiperInfo.duration}}">
+        <block wx:for="{{swiperInfo.imgUrls}}" wx:key="swiper">
+            <swiper-item>
+                <image src="{{item}}" class="slide-image" />
+            </swiper-item>
+        </block>
+    </swiper>
+
+    <!-- nav -->
+    <view class="nav">
+        <navigator class="row" url="">个性专区</navigator>
+        <navigator class="row" url="">热门排行</navigator>
+        <navigator class="row" url="">积分商城</navigator>
+        <navigator class="row" url="">活动专区</navigator>
+    </view>
+</view>

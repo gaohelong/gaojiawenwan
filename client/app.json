@@ -1,0 +1,44 @@
+{
+    "pages": [
+        "pages/index/index",
+        "pages/topic/index",
+        "pages/classify/index",
+        "pages/cart/index",
+        "pages/me/index",
+        "pages/addCgi/addCgi"
+    ],
+    "window": {
+        "backgroundColor": "#F6F6F6",
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#F6F6F6",
+        "navigationBarTitleText": "高家文玩",
+        "navigationBarTextStyle": "black"
+    },
+    "tabBar": {
+        "color": "#909195",
+        "selectedColor": "#07bb0b",
+        "list": [
+            {
+                "pagePath": "pages/index/index",
+                "text": "首页"
+            },
+            {
+                "pagePath": "pages/topic/index",
+                "text": "专题"
+            },
+            {
+                "pagePath": "pages/classify/index",
+                "text": "分类"
+            },
+            {
+                "pagePath": "pages/cart/index",
+                "text": "购物车"
+            },
+            {
+                "pagePath": "pages/me/index",
+                "text": "我的"
+            }
+        ]
+    },
+    "debug": true
+}
