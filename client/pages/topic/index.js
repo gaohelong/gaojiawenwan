@@ -39,7 +39,12 @@ Page({
                         if (res.confirm) {
                             console.log('success');
                             /* reLaunch */
-                            wx.reLaunch({
+                            // wx.reLaunch({
+                            //     url: '/pages/index/index'
+                            // });
+
+                            /* tab */
+                            wx.switchTab({
                                 url: '/pages/index/index'
                             });
                         } else {
