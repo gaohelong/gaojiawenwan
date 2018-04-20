@@ -14,7 +14,6 @@ Page({
         list: []
     },
     onLoad: function () {
-
     },
     onReady: function () {
         var that = this;
@@ -40,7 +39,12 @@ Page({
         wx.request({
             url: `${config.service.swiperUrl}?page=${this.data.page}`,
             success: function (res) {
-                setTimeout(function() {
+                // wx.pageScrollTo({
+                //     scrollTop: 300,
+                //     duration: 300
+                // });
+
+                setTimeout(function () {
                     wx.hideLoading();
                 }, app.globalData.delaylTime.loadingDelay800);
 
