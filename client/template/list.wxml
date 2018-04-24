@@ -1,0 +1,12 @@
+<template name="spList">
+    <view class="list">
+        <block wx:for="{{list}}" wx:for-item="item" wx:for-index="idx" wx:key="{{item.id}}">
+            <navigator url="/pages/details/product/detail?id={{item.id}}">
+                <view class="title">{{item.name}}</view>
+                <view class="img">
+                    <image src="{{item.img}}" />
+                </view>
+            </navigator>
+        </block>
+    </view>
+</template>

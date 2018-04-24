@@ -1,0 +1,6 @@
+<wxs src="../wxs/scrollAlert.wxs" module="scrollAlert" />
+<template name="scrollAlert">
+    <view class="scrollAlert">
+        <block>{{ scrollAlert.text }}</block>
+    </view>
+</template>

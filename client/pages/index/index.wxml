@@ -10,25 +10,17 @@
         </block>
     </swiper>
 
+    <!-- 滚动提示 -->
+    <import src="../../template/scrollAlert.wxml" />
+    <template is="scrollAlert" />
+
     <!-- nav -->
-    <view class="nav">
-        <navigator class="row" url="">个性专区</navigator>
-        <navigator class="row" url="">热门排行</navigator>
-        <navigator class="row" url="">积分商城</navigator>
-        <navigator class="row" url="">活动专区</navigator>
-    </view>
+    <import src="../../template/nav.wxml" />
+    <template is="nav" data="{{ navList }}" />
 
     <!-- list -->
-    <view class="list">
-        <view wx:for="{{list}}" wx:for-item="item" wx:for-index="idx" wx:key="{{item.id}}">
-            <navigator url="/pages/details/product/detail?id={{item.id}}">
-                <view class="title">{{item.name}}</view>
-                <view class="img">
-                    <image src="{{item.img}}" />
-                </view>
-            </navigator>
-        </view>
-    </view>
+    <import src="../../template/list.wxml" />
+    <template is="spList" data="{{ list }}" />
 </view>
 
 <!-- all screen loading -->

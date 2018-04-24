@@ -11,6 +11,12 @@ Page({
         },
         page: 1,
         swiperInfo: {},
+        navList: [
+            { url: '/pages/topic/index', title: '个性专区' },
+            { url: '/pages/classify/index', title: '热门排行' },
+            { url: '/pages/cart/index', title: '积分商城' },
+            { url: '/pages/me/index', title: '活动专区' }
+        ],
         list: []
     },
     onLoad: function () {

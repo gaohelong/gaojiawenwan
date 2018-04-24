@@ -59,3 +59,14 @@
     text-align: center;
     border-radius: 8rpx;
 }
+
+.scrollAlert {
+    line-height: 80rpx;
+    padding-left: 16rpx;
+    padding-right: 16rpx;
+    overflow: hidden;
+     text-overflow: ellipsis; 
+    white-space: nowrap;
+    border-bottom: solid #ccc 1rpx;
+    font-size: 26rpx;
+}
