@@ -9,7 +9,9 @@ Page({
         info: {
             title: '',
             time: '',
-            desc: ''
+            desc: '',
+            source: '网络',
+            author: 'China'
         }
     },
 
@@ -55,7 +57,7 @@ Page({
 
                 var info = that.data.info;
                 that.setData({
-                    info: { ...detail }
+                    info: Object.assign({}, that.data.info, detail)
                 }, function () {
                     setTimeout(function () {
                         wx.hideLoading();

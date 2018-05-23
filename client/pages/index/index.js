@@ -42,6 +42,11 @@ Page({
             return;
         }
 
+        wx.showLoading({
+            title: 'loading...',
+            mask: true
+        });
+
         wx.request({
             url: `${config.service.swiperUrl}?page=${this.data.page}`,
             success: function (res) {

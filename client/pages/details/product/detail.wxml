@@ -1,5 +1,4 @@
-<view class="prodcutDetail">
-    <view class="title">{{info.title}}</view>
-    <view class="time">{{info.time}}</view>
-    <view class="desc">{{info.desc}}</view>
-</view>
+<component-detail cpt-info="{{info}}">
+    <view class="source" slot="source">来源: {{info.source}}</view>
+    <view class="author" slot="author">作者： {{info.author}}</view>
+</component-detail>

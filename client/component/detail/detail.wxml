@@ -1,0 +1,7 @@
+<view class="prodcutDetail">
+    <slot name="source"></slot>
+    <view class="title">{{cptInfo.title}}</view>
+    <view class="time">{{cptInfo.time}}</view>
+    <view class="desc">{{cptInfo.desc}}</view>
+    <slot name="author"></slot>
+</view>
