@@ -1,3 +1,9 @@
+.header {
+    background-color: #fff;
+    position: relative;
+    z-index: 1000;
+}
+
 .header .type {
     display: flex;
     flex-direction: row;
@@ -16,9 +22,12 @@
 
 .header .order-list {
     padding-top: 16rpx;
+    padding-bottom: 16rpx;
     margin-left: 5%;
     margin-right: 5%;
+    opacity: 0;
     font-size: 28rpx;
+    transform: scale(0);
 }
 
 .header .order-list .item {

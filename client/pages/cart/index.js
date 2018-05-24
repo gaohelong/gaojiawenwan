@@ -94,5 +94,27 @@ Page({
      * 用户点击右上角分享
      */
     onShareAppMessage: function () {
+    },
+
+    /**
+     * 联系我们
+     */
+    callMeHandle: function (e) {
+        console.log(e, e.target);
+        wx.makePhoneCall({
+            phoneNumber: '13800000000'
+        });
+    },
+
+    /**
+     * 扫码
+     */
+    callSan: function (e) {
+        console.log(e, e.target);
+        wx.scanCode({
+            success: (res) => {
+                console.log(res);
+            }
+        });
     }
 })

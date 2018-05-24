@@ -3,9 +3,11 @@
         <view>{{typeList[0].name}}</view>
         <view capture-catch:tap="orderListHandle">{{typeList[1].name}}</view>
     </view>
-    <view class="order-list {{orderListSH}}" animation="{{animationData}}">
+    <view wx:if="{{orderListSH === 'show'}}" class="order-list" animation="{{animationData}}">
         <view class="item" wx:for="{{orderList}}" wx:for-item="row" wx:key="order-list-{{index}}" data-id="{{row.id}}" capture-catch:tap="orderHandle">
             {{row.name}}
         </view>
     </view>
 </view>
+<view class="main"></view>
+<component-fiexd-mask mask-sh="{{orderListSH}}"></component-fiexd-mask>

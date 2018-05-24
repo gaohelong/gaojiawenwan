@@ -27,3 +27,7 @@
 .show {
     display: block;
 }
+
+view {
+    font-size: 26rpx;
+}

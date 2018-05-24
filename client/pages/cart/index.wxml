@@ -1,1 +1,3 @@
 <view animation="{{animationData}}" style="background:red;height:100rpx;width:100rpx"></view>
+<view class="call-me" bind:tap="callMeHandle">联系我们: 138-0000-0000</view>
+<view class="cal-scan" bind:tap="callSan">扫码</view>

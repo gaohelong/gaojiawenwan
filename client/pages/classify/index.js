@@ -99,16 +99,45 @@ Page({
         let typeList = this.data.typeList;
         typeList[1].name = '默认排序 ↑';
 
+        // animation.
+        var animation = wx.createAnimation({
+            // transformOrigin: "50% 50%",
+            duration: 300,
+            timingFunction: "ease-in-out",
+            delay: 50
+        });
+
         let orderListSH = 'show';
         if (this.data.orderListSH === 'show') {
             orderListSH = 'hide';
             typeList[1].name = '默认排序 ↓';
-        }
 
-        this.setData({
-            typeList: typeList,
-            orderListSH: orderListSH
-        });
+            animation.opacity(0).step();
+            this.setData({
+                typeList: typeList
+            }, function () {
+                that.setData({
+                    animationData: animation.export()
+                }, function () {
+                    setTimeout(function () {
+                        that.setData({
+                            orderListSH: orderListSH
+                        });
+                    }, 300);
+                });
+            });
+        } else {
+            animation.opacity(1).scale(1).step();
+            // animation.scale(1).step();
+            this.setData({
+                typeList: typeList,
+                orderListSH: orderListSH
+            }, function () {
+                that.setData({
+                    animationData: animation.export()
+                });
+            });
+        }
     },
 
     /**

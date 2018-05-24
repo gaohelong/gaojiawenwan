@@ -1,3 +1,6 @@
 {
-    "navigationBarTitleText": "文玩分类"
+    "navigationBarTitleText": "文玩分类",
+    "usingComponents": {
+        "component-fiexd-mask": "../../component/mask/mask"
+    }
 }
