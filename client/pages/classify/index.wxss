@@ -1,1 +1,28 @@
-/* pages/classify/index.wxss */
+.header .type {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    font-size: 26rpx;
+    font-weight: 700;
+    color: #989797;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.3);
+}
+
+.header .type view {
+    width: 50%;
+    line-height: 80rpx;
+    text-align: center;
+}
+
+.header .order-list {
+    padding-top: 16rpx;
+    margin-left: 5%;
+    margin-right: 5%;
+    font-size: 28rpx;
+}
+
+.header .order-list .item {
+    line-height: 70rpx;
+    padding-left: 12rpx;
+    border-bottom: 1px solid #bfbaba;
+}

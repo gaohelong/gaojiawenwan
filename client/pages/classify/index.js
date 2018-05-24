@@ -3,6 +3,17 @@ Page({
      * 页面的初始数据
      */
     data: {
+        typeList: [
+            { id: 1, name: '全部商品 ↓' },
+            { id: 2, name: '默认排序 ↓' }
+        ],
+        orderList: [
+            { id: 1, name: '默认排序' },
+            { id: 2, name: '价格最低' },
+            { id: 3, name: '价格最高' }
+        ],
+        orderListSH: 'hide',
+        animationData: {}
     },
 
     /**
@@ -51,6 +62,9 @@ Page({
      * 生命周期函数--监听页面隐藏
      */
     onHide: function () {
+        this.setData({
+            orderListSH: 'hide'
+        });
     },
 
     /**
@@ -75,5 +89,45 @@ Page({
      * 用户点击右上角分享
      */
     onShareAppMessage: function () {
+    },
+
+    /**
+     * 排序显示.
+     */
+    orderListHandle: function () {
+        let that = this;
+        let typeList = this.data.typeList;
+        typeList[1].name = '默认排序 ↑';
+
+        let orderListSH = 'show';
+        if (this.data.orderListSH === 'show') {
+            orderListSH = 'hide';
+            typeList[1].name = '默认排序 ↓';
+        }
+
+        this.setData({
+            typeList: typeList,
+            orderListSH: orderListSH
+        });
+    },
+
+    /**
+     * 排序处理
+     */
+    orderHandle: function (e) {
+        let that = this;
+        let ele = e.target;
+
+        that.orderListHandle();
+        wx.showLoading({
+            title: 'loading...',
+            mask: true,
+            success: function () {
+                setTimeout(function () {
+                    console.log(ele.dataset.id);
+                    wx.hideLoading();
+                }, 1000);
+            }
+        });
     }
 })

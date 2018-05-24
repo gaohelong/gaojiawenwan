@@ -9,20 +9,17 @@
 }
 
 .nav {
-    display: flex;
-    flex-direction: row;
+    white-space: nowrap;
     font-size: 26rpx;
-    line-height: 60rpx;
 }
 
 .nav .row {
-    width: 22.5%;
-    margin-left: 5%;
-    margin-right: 5%;
+    display: inline-block;
+    width: 160rpx;
+    height: 60rpx;
+    line-height: 60rpx;
     padding-top: 30rpx;
     padding-bottom: 30rpx;
-    flex-grow: 1;
-    flex-shrink: 1;
     text-align: center;
 }
 
@@ -65,7 +62,7 @@
     padding-left: 16rpx;
     padding-right: 16rpx;
     overflow: hidden;
-     text-overflow: ellipsis; 
+    text-overflow: ellipsis;
     white-space: nowrap;
     border-bottom: solid #ccc 1rpx;
     font-size: 26rpx;

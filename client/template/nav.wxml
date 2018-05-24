@@ -1,7 +1,7 @@
 <template name="nav">
-    <view class="nav">
+    <scroll-view scroll-x class="nav">
         <block wx:for="{{ navList }}" wx:for-index="idx" wx:for-item="item" wx:key="{{ item.idx }}">
             <navigator open-type="switchTab" class="row" url="{{ item.url }}">{{ item.title }}</navigator>
         </block>
-    </view>
+    </scroll-view>
 </template>

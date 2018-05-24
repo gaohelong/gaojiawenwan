@@ -15,7 +15,11 @@ Page({
             { url: '/pages/topic/index', title: '个性专区' },
             { url: '/pages/classify/index', title: '热门排行' },
             { url: '/pages/cart/index', title: '积分商城' },
-            { url: '/pages/me/index', title: '活动专区' }
+            { url: '/pages/me/index', title: '活动专区' },
+            { url: '/pages/topic/index', title: '核桃专区' },
+            { url: '/pages/classify/index', title: '手串专区' },
+            { url: '/pages/cart/index', title: '纸币专区' },
+            { url: '/pages/me/abc', title: '潘家园' }
         ],
         list: []
     },
@@ -32,6 +36,10 @@ Page({
         that.list();
     },
     onShow: function () {
+        wx.pageScrollTo({
+            scrollTop: 0,
+            duration: 1000
+        });
     },
     onPullDownRefresh: function () { // 下拉刷新.
     },
@@ -83,7 +91,7 @@ Page({
     onReachBottom: function () { // 上拉触底.
         var that = this;
         var loading = this.data.loading;
-        loading.sh = 'block';
+        // loading.sh = 'block';
 
         this.setData({
             loading,

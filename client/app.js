@@ -12,9 +12,12 @@ App({
             loadingDelay800: 800
         }
     },
-    onLaunch: function () {
+
+    onLaunch: function (options) {
+        console.log(options);
         qcloud.setLoginUrl(config.service.loginUrl)
     },
+
     onShow: function () {
     }
 })

@@ -19,3 +19,11 @@
     border-radius: 8rpx;
     background-color: rgba(0, 0, 0, 0.5);
 }
+
+.hide {
+    display: none;
+}
+
+.show {
+    display: block;
+}
