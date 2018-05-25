@@ -5,7 +5,8 @@ var config = require('./config')
 App({
     globalData: {
         allScreenLoading: {
-            title: 'loading……'
+            // title: 'loading……'
+            title: '加载中'
         },
         delaylTime: {
             loadingDelay500: 500,

@@ -1,3 +1,5 @@
+const app = getApp();
+
 Page({
     /**
      * 页面的初始数据
@@ -13,7 +15,8 @@ Page({
             { id: 3, name: '价格最高' }
         ],
         orderListSH: 'hide',
-        animationData: {}
+        animationData: {},
+        orderListTimeVal: ''
     },
 
     /**
@@ -102,11 +105,12 @@ Page({
         // animation.
         var animation = wx.createAnimation({
             // transformOrigin: "50% 50%",
-            duration: 300,
+            duration: 200,
             timingFunction: "ease-in-out",
             delay: 50
         });
 
+        clearTimeout(that.orderListTimeVal);
         let orderListSH = 'show';
         if (this.data.orderListSH === 'show') {
             orderListSH = 'hide';
@@ -119,11 +123,11 @@ Page({
                 that.setData({
                     animationData: animation.export()
                 }, function () {
-                    setTimeout(function () {
+                    that.orderListTimeVal = setTimeout(function () {
                         that.setData({
                             orderListSH: orderListSH
                         });
-                    }, 300);
+                    }, 200);
                 });
             });
         } else {
@@ -149,7 +153,7 @@ Page({
 
         that.orderListHandle();
         wx.showLoading({
-            title: 'loading...',
+            title: app.globalData.allScreenLoading.title,
             mask: true,
             success: function () {
                 setTimeout(function () {

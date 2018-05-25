@@ -22,6 +22,7 @@ Page({
      * 生命周期函数--监听页面显示
      */
     onShow: function () {
+        console.log('on show');
         var animation = wx.createAnimation({
             duration: 1000,
             timingFunction: 'ease',

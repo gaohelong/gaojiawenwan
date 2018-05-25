@@ -1,5 +1,5 @@
 const app = getApp(); // 获取应用实例
-var config = require('../../config');
+let config = require('../../config');
 // var qcloud = require('../../vendor/wafer2-client-sdk/index');
 
 Page({
@@ -26,7 +26,7 @@ Page({
     onLoad: function () {
     },
     onReady: function () {
-        var that = this;
+        let that = this;
 
         wx.showLoading({
             title: app.globalData.allScreenLoading.title,
@@ -36,25 +36,15 @@ Page({
         that.list();
     },
     onShow: function () {
-        wx.pageScrollTo({
-            scrollTop: 0,
-            duration: 1000
-        });
+        // wx.pageScrollTo({
+        //     scrollTop: 0,
+        //     duration: 1000
+        // });
     },
     onPullDownRefresh: function () { // 下拉刷新.
     },
     list: function () {
-        var that = this;
-
-        if (!that.data.loading.offOn) {
-            return;
-        }
-
-        wx.showLoading({
-            title: 'loading...',
-            mask: true
-        });
-
+        let that = this;
         wx.request({
             url: `${config.service.swiperUrl}?page=${this.data.page}`,
             success: function (res) {
@@ -67,8 +57,8 @@ Page({
                     wx.hideLoading();
                 }, app.globalData.delaylTime.loadingDelay800);
 
-                var { data } = res.data;
-                var loading = that.data.loading;
+                let { data } = res.data;
+                let loading = that.data.loading;
                 if (data.list == '') {
                     loading.sh = 'block';
                     loading.title = '已经到底!';
@@ -79,7 +69,7 @@ Page({
                     return;
                 }
 
-                var list = that.data.list;
+                let list = that.data.list;
                 list = list.concat(data.list);
                 that.setData({
                     swiperInfo: data.swiper,
@@ -89,9 +79,18 @@ Page({
         });
     },
     onReachBottom: function () { // 上拉触底.
-        var that = this;
-        var loading = this.data.loading;
+        let that = this;
+        let loading = this.data.loading;
         // loading.sh = 'block';
+
+        if (!this.data.loading.offOn) {
+            return;
+        }
+
+        wx.showLoading({
+            title: app.globalData.allScreenLoading.title,
+            mask: true
+        });
 
         this.setData({
             loading,
