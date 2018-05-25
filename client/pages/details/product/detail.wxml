@@ -1,4 +1,4 @@
-<component-detail cpt-info="{{info}}">
+<component-detail cpt-info="{{info}}" bind:tap="onTapHandle">
     <view class="source" slot="source">来源: {{info.source}}</view>
     <view class="author" slot="author">作者： {{info.author}}</view>
 </component-detail>

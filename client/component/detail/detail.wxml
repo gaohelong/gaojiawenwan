@@ -1,4 +1,4 @@
-<view class="prodcutDetail">
+<view class="prodcutDetail" catch:tap="getInfoHandle">
     <slot name="source"></slot>
     <view class="title">{{cptInfo.title}}</view>
     <view class="time">{{cptInfo.time}}</view>

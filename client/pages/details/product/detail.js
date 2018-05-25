@@ -107,5 +107,9 @@ Page({
      */
     onShareAppMessage: function () {
 
+    },
+
+    onTapHandle: function(e) {
+        console.log(e);
     }
 })
